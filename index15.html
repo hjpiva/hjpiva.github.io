@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Piva Engenharia: Soluções em energia solar fotovoltaica para residências e empresas em Bauru/SP. Projetos sob medida e economia imediata. Parceiro PHB Solar.">
+    <meta name="keywords" content="energia solar bauru, painel solar bauru, piva engenharia, phb solar, energia fotovoltaica, economia de energia">
+    
+    <meta property="og:title" content="Piva Engenharia | Energia Solar em Bauru">
+    <meta property="og:description" content="Diga adeus às contas de luz altíssimas! Projetos fotovoltaicos com instalação rápida e sem dor de cabeça.">
+    <meta property="og:image" content="foto-telhado.jpg">
+    <meta property="og:url" content="https://www.seusiteaqui.com.br"> <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <title>Piva Engenharia | Energia Solar em Bauru | Parceiro PHB Solar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- VARIÁVEIS DE CORES --- */
+        :root {
+            --azul-escuro: #0f3a5e; 
+            --laranja: #f26f22;     
+            --laranja-hover: #d95d18;
+            --fundo-claro: #f8f9fa;
+            --texto-escuro: #333333;
+            --texto-claro: #ffffff;
+        }
+
+        /* --- RESET BÁSICO --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--texto-escuro);
+            line-height: 1.6;
+            background-color: var(--texto-claro);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--azul-escuro);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* --- CABEÇALHO (HEADER) COM LOGOS --- */
+        header {
+            background-color: var(--texto-claro);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+        }
+
+        .logo-piva {
+            max-height: 100px; 
+            width: auto;
+        }
+
+        .logo-phb {
+            max-height: 80px; 
+            width: auto;
+        }
+
+        .logo-container a {
+            display: flex;
+            align-items: center;
+        }
+
+        .partnership-text {
+            font-size: 0.8rem;
+            color: #000000; 
+            margin: 0 10px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px; 
+        }
+
+        nav a {
+            background-color: var(--laranja);
+            color: var(--azul-escuro);
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: var(--laranja-hover);
+            transform: translateY(-2px);
+        }
+
+        /* --- BOTÕES GERAIS --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--laranja);
+            color: var(--texto-claro);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--laranja-hover);
+            transform: translateY(-2px);
+        }
+
+        /* --- SEÇÃO HERO (PRINCIPAL) COM FOTO CIRCULAR --- */
+        .hero {
+            background-color: var(--azul-escuro); 
+            color: var(--texto-claro);
+            margin-top: 130px; 
+            display: flex;
+            align-items: center;
+            padding: 60px 5%;
+            min-height: calc(100vh - 130px); 
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            gap: 40px;
+        }
+
+        .hero-text-content {
+            flex: 0 0 50%; 
+            text-align: left; 
+        }
+
+        .saudacao-laranja {
+            color: var(--laranja) !important;
+            white-space: nowrap; 
+            font-size: 2.2rem !important; 
+            margin-bottom: 10px !important;
+        }
+
+        .hero h1 {
+            color: var(--texto-claro);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            max-width: 100%; 
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 100%; 
+        }
+
+        .hero-image-content {
+            flex: 0 0 50%; 
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            gap: 30px; 
+        }
+
+        .circular-photo {
+            width: 480px; 
+            height: 480px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            border: 8px solid rgba(255, 255, 255, 0.2); 
+            outline: 5px solid var(--laranja); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.3s ease, opacity 0.5s ease;
+        }
+
+        .circular-photo:hover {
+            transform: scale(1.03); 
+        }
+
+        .caixa-info-laranja {
+            background-color: var(--laranja);
+            color: var(--texto-claro);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 480px; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        /* --- SEÇÕES GENÉRICAS --- */
+        section {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        /* --- BENEFÍCIOS --- */
+        .beneficios {
+            background-color: var(--fundo-claro);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--texto-claro);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+            border-bottom: 4px solid var(--laranja);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: var(--laranja);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* --- COMO FUNCIONA E DIAGRAMA --- */
+        .como-funciona-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .diagrama-wrapper {
+            flex: 1;
+            text-align: center;
+        }
+
+        .img-diagrama {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 4px solid var(--fundo-claro);
+            transition: transform 0.3s ease;
+        }
+
+        .img-diagrama:hover {
+            transform: scale(1.02);
+        }
+
+        .legenda-diagrama {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .passo-a-passo {
+            flex: 1;
+        }
+
+        .passo {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            background: var(--fundo-claro);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--azul-escuro);
+            transition: background-color 0.3s;
+        }
+
+        .passo:hover {
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .passo-numero {
+            background-color: var(--azul-escuro);
+            color: var(--texto-claro);
+            font-size: 24px;
+            font-weight: bold;
+            min-width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .passo h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .passo p {
+            font-size: 0.95rem;
+        }
+
+        /* --- PORTFÓLIO --- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            background: var(--texto-claro);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-img-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: bold;
+            border-bottom: 4px solid var(--laranja);
+            object-fit: cover;
+        }
+
+        .portfolio-desc {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* --- MELHORIA 3: DEPOIMENTOS --- */
+        .depoimentos {
+            background-color: var(--azul-escuro);
+            color: var(--texto-claro);
+        }
+        
+        .depoimentos .section-title {
+            color: var(--texto-claro);
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .depoimento-card {
+            background: var(--texto-claro);
+            color: var(--texto-escuro);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .depoimento-card i.fa-quote-left {
+            font-size: 40px;
+            color: var(--laranja);
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .estrelas {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .cliente-nome {
+            font-weight: 700;
+            color: var(--azul-escuro);
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* --- SOBRE NÓS E CONTATO DO ENGENHEIRO --- */
+        .sobre {
+            text-align: center;
+            background-color: var(--fundo-claro); /* Mudado para não conflitar com depoimentos */
+        }
+
+        .sobre h2 {
+            color: var(--azul-escuro);
+        }
+
+        .sobre p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            font-size: 1.1rem;
+        }
+
+        .perfil-engenheiro {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .foto-perfil {
+            width: 400px; 
+            height: 225px; 
+            max-width: 90%; 
+            border-radius: 20px; 
+            object-fit: cover; 
+            border: 4px solid var(--laranja);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .sobre .contato-info p {
+            margin: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        .contato-info strong {
+            color: var(--laranja);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .contato-info i {
+            color: var(--laranja);
+            margin-right: 8px;
+        }
+
+        /* --- RODAPÉ E CTA FINAL --- */
+        footer {
+            background-color: #0a253c;
+            color: var(--texto-claro);
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+        }
+
+        footer h2 {
+            color: var(--texto-claro);
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            margin-bottom: 30px;
+        }
+
+        .copyright {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #1a3e5c;
+            padding-top: 20px;
+        }
+
+        /* --- BOTÃO WHATSAPP FLUTUANTE --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .logo-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .logo-piva {
+                max-height: 80px;
+            }
+            .logo-phb {
+                max-height: 60px;
+            }
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+                min-height: auto;
+                margin-top: 160px; 
+            }
+            .hero-container {
+                flex-direction: column; 
+                text-align: center;
+                gap: 30px;
+            }
+            .hero-text-content, .hero-image-content {
+                flex: 0 0 100%;
+                width: 100%;
+                text-align: center;
+            }
+
+            .saudacao-laranja {
+                white-space: normal; 
+                font-size: 1.8rem !important;
+            }
+
+            .circular-photo {
+                width: 300px; 
+                height: 300px;
+                border-width: 5px;
+                outline-width: 3px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .como-funciona-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .foto-perfil {
+                width: 100%; 
+                height: auto;
+                aspect-ratio: 16/9; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo-piva.jpg" alt="Piva Engenharia" class="logo-piva">
+            <span class="partnership-text">EM PARCERIA COM</span>
+            <a href="https://www.energiasolarphb.com.br/" target="_blank" title="Visite o site da PHB Solar">
+                <img src="logo-phb.jpg" alt="PHB Solar" class="logo-phb">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#beneficios">Vantagens</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#depoimentos">Avaliações</a></li> 
+                <li><a href="#sobre">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            
+            <div class="hero-text-content">
+                <h1 class="saudacao-laranja">Bem-vindo(a) à Piva Engenharia</h1>
+                <h1>Energia Solar Inteligente para Casas e Empresas em Bauru</h1>
+                <p>Diga adeus às contas de luz altíssimas. Projetos fotovoltaicos sob medida com instalação rápida, sem dor de cabeça e com economia imediata.</p>
+                <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20energia%20solar." target="_blank" class="btn">
+                    <i class="fa-brands fa-whatsapp"></i> Fazer um Orçamento sem Compromisso
+                </a>
+            </div>
+
+            <div class="hero-image-content">
+                <img src="foto-telhado.jpg" alt="Painéis solares instalados no telhado Piva Engenharia" class="circular-photo">
+                <div class="caixa-info-laranja">
+                    Energia solar feita para você. A Piva Engenharia oferece soluções fotovoltaicas sob medida para lares e empresas. Em parceria com a PHB Eletrônica, garantimos os melhores equipamentos e preços do mercado para unir sustentabilidade, segurança e uma economia que você sente na mesma hora.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="beneficios" class="beneficios">
+        <h2 class="section-title">Por que Bauru está escolhendo a Piva?</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <h3>Economia Direta</h3>
+                <p>Reduza até 95% da sua fatura mensal. O dinheiro que ia para a concessionária agora fica no seu bolso.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h3>Especialistas em Pequenos Espaços</h3>
+                <p>No telhado de casa ou na cobertura do comércio, otimizamos cada espaço para gerar o máximo de energia.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>Atendimento Local e Ágil</h3>
+                <p>Estamos na sua cidade. Suporte técnico rápido, próximo de você e sem a demora das grandes empresas.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-check-double"></i>
+                <h3>Zero Dor de Cabeça</h3>
+                <p>Da aprovação do projeto na concessionária à instalação, cuidamos de 100% da parte chata para você.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona">
+        <h2 class="section-title">Como a mágica da economia acontece:</h2>
+        
+        <div class="como-funciona-content">
+            <div class="diagrama-wrapper">
+                <img src="diagrama-solar.jpg" alt="Gráfico explicando o funcionamento do sistema fotovoltaico (Painéis, Inversor, Quadro e Medidor)" class="img-diagrama" onerror="this.src='https://via.placeholder.com/600x500.png?text=Insira+seu+Gráfico+Aqui+(diagrama-solar.jpg)';">
+                <p class="legenda-diagrama">Do sol direto para a sua tomada: energia limpa, segura e contínua.</p>
+            </div>
+
+            <div class="passo-a-passo">
+                <div class="passo">
+                    <div class="passo-numero">1</div>
+                    <div>
+                        <h3>Captação e Conversão</h3>
+                        <p>Os módulos no seu telhado captam a luz do sol. O inversor PHB transforma essa energia na corrente exata que seus aparelhos utilizam.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <div class="passo-numero">2</div>
+                    <div>
+                        <h3>Uso Imediato</h3>
+                        <p>A energia gerada vai direto para o seu quadro de distribuição, alimentando geladeira, ar-condicionado e maquinários em tempo real.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <div class="passo-numero">3</div>
+                    <div>
+                        <h3>Geração de Créditos</h3>
+                        <p>A energia que você gera a mais (e não consome na hora) é enviada para a rede da distribuidora local. O medidor bidirecional registra tudo.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <div class="passo-numero">4</div>
+                    <div>
+                        <h3>Economia Garantida</h3>
+                        <p>A distribuidora transforma esse excedente em créditos para você. No fim do mês, esses créditos abatem o seu consumo noturno, gerando a tão sonhada economia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title">Alguns Serviços Executados</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="Bela França.png" alt="Condomínio Residencial em Bauru" class="portfolio-img-placeholder">
+                <div class="portfolio-desc">
+                    <h3>Condomínio Residencial</h3>
+                    <p>Bauru/SP</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="Anderson.jpg" alt="Comércio de Pequeno Porte em Bauru" class="portfolio-img-placeholder">
+                <div class="portfolio-desc">
+                    <h3>Instalação Residencial</h3>
+                    <p>Condomínio Tamboré - Bauru/SP</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="Luis.jpg" alt="Outra Instalação Residencial em Bauru" class="portfolio-img-placeholder">
+                <div class="portfolio-desc">
+                    <h3>Instalação Residencial</h3>
+                    <p>Bauru/SP</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="Rafael.jpg" alt="Instalação em Telhado Comercial" class="portfolio-img-placeholder">
+                <div class="portfolio-desc">
+                    <h3>Instalação Residencial</h3>
+                    <p>Matão/SP</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="Nilton.jpg" alt="Sistema Fotovoltaico Instalado" class="portfolio-img-placeholder">
+                <div class="portfolio-desc">
+                    <h3>Instalação Residencial</h3>
+                    <p>Bauru/SP</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="foto-telhado.jpg" alt="Projeto Piva Engenharia" class="portfolio-img-placeholder">
+                <div class="portfolio-desc">
+                    <h3>Instalação Residencial</h3>
+                    <p>Residencial Primavera - Piratininga/SP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+        <h2 class="section-title">O que dizem nossos clientes</h2>
+        <div class="depoimentos-grid">
+            <div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Registro meu elogio à Piva Engenharia pela excelente instalação do sistema fotovoltaico em minha residência. Destaco a qualidade dos equipamentos da PHB, aliada ao profissionalismo e à eficiência da equipe. Os resultados financeiros têm sido muito positivos, com significativa redução na conta de energia. Recomendo fortemente!"</p>
+                <div class="cliente-nome">- Nilton José Saggioro (Bauru/SP)</div>
+            </div>
+            <div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Estou muito satisfeito com os serviços de instalação das placas  solares e inversor da PHB. As placas são ótimas e a instalação ficou perfeita. A Empresa Piva Engenharia da uma ótima assistência durante e após os serviços prestados."</p>
+                <div class="cliente-nome">- Jehud Bortolozzi (Bauru/SP)</div>
+            </div>
+            <div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Excelente atendimento desde o primeiro contato. Instalação rápida e equipe muito organizada. Minha conta de luz caiu de R$ 700 para a taxa mínima no primeiro mês! A Piva Engenharia cuidou de toda a burocracia com a CPFL, não tive dor de cabeça nenhuma. Sistema gerando perfeitamente e suporte sempre à disposição.Pesquisei muito antes de fechar e a parceria deles com a PHB me passou muita segurança. Equipamento de primeira e engenheiro e equipe super atenciosos."</p>
+                <div class="cliente-nome">- Antonio Carlos Teures (Bauru/SP)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Engenharia de Confiança, Perto de Você.</h2>
+        <p>A Piva Engenharia é focada em trazer a melhor tecnologia solar para residências e pequenos comércios em Bauru e região. Sabemos que, infelizmente, o mercado atual conta com diversas marcas de inversores e módulos importados que falham no suporte técnico no Brasil, deixando o cliente com o sistema parado e desamparado em caso de avarias.</p>
+        <p>É exatamente para proteger o seu investimento contra esses riscos que firmamos uma sólida parceria com a PHB Solar, garantindo equipamentos de altíssima qualidade e rigor técnico. <strong>Além disso, contamos com o excelente pós-venda da PHB, que oferece assistência técnica rápida e eficiente direto de fábrica.</strong> Entregamos projetos rigorosamente dimensionados, com equipamentos duráveis e um compromisso real com a sua tranquilidade a longo prazo. O seu telhado merece uma engenharia de verdade.</p>
+        <br>
+        <a href="https://wa.me/5514997713716" target="_blank" class="btn" style="background-color: var(--azul-escuro); color: var(--texto-claro);">Fale com um Engenheiro</a>
+        
+        <div class="perfil-engenheiro">
+            <img src="foto-engenheiro 3.jpg" alt="Engenheiro Responsável" class="foto-perfil">
+            <div class="contato-info">
+                <p><strong>Piva Engenharia LTDA</strong> Soluções em Energia Solar Fotovoltaica</p>
+                <p><i class="fa-solid fa-phone"></i> Contato: (14) 99771-3716</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: engenharia.piva@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Pronto para valorizar seu imóvel e cortar gastos?</h2>
+        <p>Mande uma foto da sua conta de luz e descubra em minutos o quanto você pode começar a economizar.</p>
+        <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20simular%20minha%20economia." target="_blank" class="btn">
+            📲 Simular Minha Economia no WhatsApp
+        </a>
+        
+        <div class="copyright">
+            <p>&copy; 2026 Piva Engenharia. Todos os direitos reservados. Parceiro PHB Solar Autorizado. Atendimento exclusivo em Bauru/SP e região.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5514997713716" class="whatsapp-float" target="_blank" title="Fale conosco pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // --- SLIDESHOW DA FOTO CIRCULAR ---
+        const imagensHero = [
+            "foto-telhado.jpg", 
+            "Bela França.png",
+            "Anderson.jpg",
+            "Luis.jpg",
+            "Rafael.jpg",
+            "Nilton.jpg"
+        ];
+        
+        // --- MELHORIA 1: PRÉ-CARREGAMENTO DAS IMAGENS ---
+        // Isso garante que a foto não pisque ou demore a carregar na primeira vez que for exibida
+        imagensHero.forEach(src => {
+            const imgPreload = new Image();
+            imgPreload.src = src;
+        });
+
+        let indiceAtual = 0;
+        const fotoCircular = document.querySelector('.circular-photo');
+
+        setInterval(() => {
+            fotoCircular.style.opacity = 0;
+
+            setTimeout(() => {
+                indiceAtual = (indiceAtual + 1) % imagensHero.length;
+                fotoCircular.src = imagensHero[indiceAtual];
+                fotoCircular.style.opacity = 1;
+            }, 500); 
+
+        }, 3500); 
+    </script>
+</body>
+</html>
