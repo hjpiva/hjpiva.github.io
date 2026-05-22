@@ -10,9 +10,11 @@
     <meta property="og:title" content="Piva Engenharia | Energia Solar em Bauru">
     <meta property="og:description" content="Diga adeus às contas de luz altíssimas! Projetos fotovoltaicos com instalação rápida e sem dor de cabeça.">
     <meta property="og:image" content="foto-telhado.jpg">
-    <meta property="og:url" content="https://www.seusiteaqui.com.br"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seusiteaqui.com.br"> 
+    <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> <title>Piva Engenharia | Energia Solar em Bauru | Parceiro PHB Solar</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <title>Piva Engenharia | Energia Solar em Bauru | Parceiro PHB Solar</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -26,6 +28,7 @@
             --fundo-claro: #f8f9fa;
             --texto-escuro: #333333;
             --texto-claro: #ffffff;
+            --verde-whatsapp: #25d366;
         }
 
         /* --- RESET BÁSICO --- */
@@ -136,7 +139,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- SEÇÃO HERO (PRINCIPAL) COM FOTO CIRCULAR --- */
+        /* --- SEÇÃO HERO (PRINCIPAL) WITH CIRCULAR PHOTO --- */
         .hero {
             background-color: var(--azul-escuro); 
             color: var(--texto-claro);
@@ -219,6 +222,170 @@
             font-weight: 600;
         }
 
+        /* --- SEÇÃO NOVA: CALCULADORA E KITS --- */
+        .simulador-section {
+            background-color: var(--texto-claro);
+            padding: 80px 5%;
+        }
+
+        .simulador-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .calc-wrapper {
+            background: var(--fundo-claro);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 2px solid #e1e8ed;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .calc-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .calc-input {
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 280px;
+            font-weight: 600;
+            color: var(--azul-escuro);
+        }
+
+        .calc-input:focus {
+            outline: none;
+            border-color: var(--laranja);
+        }
+
+        .resultado-box {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--texto-claro);
+            border-radius: 8px;
+            border-left: 6px solid var(--laranja);
+            display: none;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .resultado-box h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--azul-escuro);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .resultado-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .resultado-item {
+            background: var(--fundo-claro);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        .resultado-item strong {
+            color: var(--laranja);
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .aviso-estimativa {
+            font-size: 0.85rem;
+            color: #777;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .kits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .kit-card {
+            background: var(--fundo-claro);
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .kit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: var(--laranja);
+        }
+
+        .kit-tag {
+            background: var(--azul-escuro);
+            color: var(--texto-claro);
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .kit-card h3 {
+            font-size: 1.6rem;
+            color: var(--laranja);
+            margin-bottom: 15px;
+        }
+
+        .kit-detalhes {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .kit-detalhes li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .kit-detalhes i {
+            color: var(--azul-escuro);
+            margin-right: 6px;
+        }
+
+        .btn-kit {
+            background: var(--azul-escuro);
+            color: var(--texto-claro);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-kit:hover {
+            background: var(--laranja);
+        }
+
         /* --- SEÇÕES GENÉRICAS --- */
         section {
             padding: 80px 5%;
@@ -227,7 +394,14 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
             margin-bottom: 50px;
+            font-size: 1.1rem;
         }
 
         /* --- BENEFÍCIOS --- */
@@ -385,7 +559,7 @@
             text-align: center;
         }
 
-        /* --- MELHORIA 3: DEPOIMENTOS --- */
+        /* --- DEPOIMENTOS --- */
         .depoimentos {
             background-color: var(--azul-escuro);
             color: var(--texto-claro);
@@ -438,7 +612,7 @@
         /* --- SOBRE NÓS E CONTATO DO ENGENHEIRO --- */
         .sobre {
             text-align: center;
-            background-color: var(--fundo-claro); /* Mudado para não conflitar com depoimentos */
+            background-color: var(--fundo-claro);
         }
 
         .sobre h2 {
@@ -518,7 +692,7 @@
             height: 60px;
             bottom: 40px;
             right: 40px;
-            background-color: #25d366;
+            background-color: var(--verde-whatsapp);
             color: #FFF;
             border-radius: 50px;
             text-align: center;
@@ -598,6 +772,14 @@
                 font-size: 1.1rem;
             }
 
+            .calc-form {
+                flex-direction: column;
+                width: 100%;
+            }
+            .calc-input {
+                width: 100%;
+            }
+
             .como-funciona-content {
                 flex-direction: column;
                 gap: 30px;
@@ -624,6 +806,7 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
+                <li><a href="#simulador">Simulador</a></li>
                 <li><a href="#beneficios">Vantagens</a></li>
                 <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
@@ -652,6 +835,125 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section id="simulador" class="simulador-section">
+        <div class="simulador-container">
+            <h2 class="section-title">Simule seu Kit PHB Solar</h2>
+            <p class="section-subtitle">Descubra o sistema ideal baseado no seu consumo médio mensal ou escolha um de nossos kits padrões abaixo.</p>
+
+            <div class="calc-wrapper">
+                <h3>Calculadora Solar Rápida</h3>
+                <p>Preencha os dados abaixo (o seu consumo médio em kWh você encontra na sua conta de luz):</p>
+                
+                <div class="calc-form">
+                    <input type="text" id="nomeCliente" class="calc-input" placeholder="Seu Nome">
+                    <input type="number" id="consumoKwh" class="calc-input" placeholder="Consumo Médio (Ex: 450)" min="50">
+                    <button onclick="calcularKit()" class="btn"><i class="fa-solid fa-calculator"></i> Simular Sistema</button>
+                </div>
+
+                <div id="resultadoCalc" class="resultado-box">
+                    <h4><i class="fa-solid fa-solar-panel"></i> Sistema Recomendado para o seu Perfil:</h4>
+                    <div class="resultado-grid">
+                        <div class="resultado-item">
+                            Geração Estimada:
+                            <strong id="resGeracao">--</strong>
+                        </div>
+                        <div class="resultado-item">
+                            Inversor PHB ideal:
+                            <strong id="resInversor">--</strong>
+                        </div>
+                        <div class="resultado-item">
+                            Quantidade de Placas:
+                            <strong id="resPlacas">--</strong>
+                        </div>
+                        <div class="resultado-item">
+                            Área Necessária (Telhado):
+                            <strong id="resArea">--</strong>
+                        </div>
+                    </div>
+                    <a id="btnWhatsappCalc" href="#" target="_blank" class="btn" style="background-color: var(--verde-whatsapp); display: inline-block;">
+                        <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento Comercial Deste Kit
+                    </a>
+                    <p class="aviso-estimativa">*Os valores acima são estimativas técnicas padrão para Bauru/SP. O dimensionamento final pode variar de acordo com a orientação do telhado e sombreamento.</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; font-family: 'Montserrat', sans-serif; margin-bottom: 25px;">Nossos Kits PHB Mais Procurados</h3>
+            <div class="kits-grid">
+                
+                <div class="kit-card">
+                    <div>
+                        <span class="kit-tag">Ideal para Casas Pequenas</span>
+                        <h3>Kit 300 kWh</h3>
+                        <ul class="kit-detalhes">
+                            <li><i class="fa-solid fa-circle-check"></i> Inversor PHB de Alta Eficiência</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aprox. 4 a 5 Painéis Solares</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Área de telhado: ~12m²</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Monitoramento Wi-Fi Integrado</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20300%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                </div>
+
+                <div class="kit-card">
+                    <div>
+                        <span class="kit-tag">Mais Vendido</span>
+                        <h3>Kit 500 kWh</h3>
+                        <ul class="kit-detalhes">
+                            <li><i class="fa-solid fa-circle-check"></i> Inversor PHB Sob Medida</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aprox. 7 a 8 Painéis Solares</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Área de telhado: ~20m²</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Suporte técnico total Piva</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20500%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                </div>
+
+                <div class="kit-card">
+                    <div>
+                        <span class="kit-tag">Excelente Custo-Benefício</span>
+                        <h3>Kit 600 kWh</h3>
+                        <ul class="kit-detalhes">
+                            <li><i class="fa-solid fa-circle-check"></i> Tecnologia PHB Solar</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aprox. 9 a 10 Painéis Solares</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Área de telhado: ~25m²</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Homologação CPFL inclusa</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20600%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                </div>
+
+                <div class="kit-card">
+                    <div>
+                        <span class="kit-tag">Casas Grandes / Comércios</span>
+                        <h3>Kit 800 kWh</h3>
+                        <ul class="kit-detalhes">
+                            <li><i class="fa-solid fa-circle-check"></i> Inversor PHB Robusto</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aprox. 12 a 13 Painéis Solares</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Área de telhado: ~32m²</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Engenharia e execução total</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20800%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                </div>
+
+                <div class="kit-card">
+                    <div>
+                        <span class="kit-tag">Alta Performance</span>
+                        <h3>Kit 1000 kWh</h3>
+                        <ul class="kit-detalhes">
+                            <li><i class="fa-solid fa-circle-check"></i> Sistema Comercial/Residencial</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aprox. 15 a 16 Painéis Solares</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Área de telhado: ~40m²</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Máxima geração e segurança</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%201000%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -686,7 +988,7 @@
         
         <div class="como-funciona-content">
             <div class="diagrama-wrapper">
-                <img src="diagrama-solar1.jpg" alt="Gráfico explicando o funcionamento do sistema fotovoltaico (Painéis, Inversor, Quadro e Medidor)" class="img-diagrama" onerror="this.src='https://via.placeholder.com/600x500.png?text=Insira+seu+Gráfico+Aqui+(diagrama-solar1.jpg)';">
+                <img src="diagrama-solar.jpg" alt="Gráfico explicando o funcionamento do sistema fotovoltaico (Painéis, Inversor, Quadro e Medidor)" class="img-diagrama" onerror="this.src='https://via.placeholder.com/600x500.png?text=Insira+seu+Gráfico+Aqui+(diagrama-solar.jpg)';">
                 <p class="legenda-diagrama">Do sol direto para a sua tomada: energia limpa, segura e contínua.</p>
             </div>
 
@@ -792,7 +1094,7 @@
                 <div class="estrelas">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Estou muito satisfeito com os serviços de instalação das placas  solares e inversor da PHB. As placas são ótimas e a instalação ficou perfeita. A Empresa Piva Engenharia da uma ótima assistência durante e após os serviços prestados."</p>
+                <p>"Estou muito satisfeito com os serviços de instalação das placas solares e inversor da PHB. As placas são ótimas e a instalação ficou perfeita. A Empresa Piva Engenharia da uma ótima assistência durante e após os serviços prestados."</p>
                 <div class="cliente-nome">- Jehud Bortolozzi (Bauru/SP)</div>
             </div>
             <div class="depoimento-card">
@@ -802,6 +1104,39 @@
                 </div>
                 <p>"Excelente atendimento desde o primeiro contato. Instalação rápida e equipe muito organizada. Minha conta de luz caiu de R$ 700 para a taxa mínima no primeiro mês! A Piva Engenharia cuidou de toda a burocracia com a CPFL, não tive dor de cabeça nenhuma. Sistema gerando perfeitamente e suporte sempre à disposição.Pesquisei muito antes de fechar e a parceria deles com a PHB me passou muita segurança. Equipamento de primeira e engenheiro e equipe super atenciosos."</p>
                 <div class="cliente-nome">- Antonio Carlos Teures (Bauru/SP)</div>
+            </div>
+            <div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Fiquei muito satisfeita com a colocação da energia fotovoltaica em minha residência. Gostei muito do atendimento prestado pelo engenheiro Haylton Piva. Tudo funciona muito bem. O material é de qualidade e o serviço também. Fico grata por ter o problema do gasto de energia elétrica resolvido."</p>
+                <div class="cliente-nome">- Bernadete Guimarães (Bauru/SP)</div>
+            </div>
+
+            <div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"A maneira econômica de instalar sua energia solar.Qualidade nos equipamentos e assistência no pós venda. Como cliente recomendo"</p>
+                <div class="cliente-nome">- João Batista Gonçalves (Bauru/SP)</div>
+            </div>
+<div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"A maneira econômica de instalar sua energia solar.Qualidade nos equipamentos e assistência no pós venda. Como cliente recomendo"</p>
+                <div class="cliente-nome">- João Batista Gonçalves (Bauru/SP)</div>
+            </div>
+            <div class="depoimento-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Fiquei muito satisfeita com a colocação da energia fotovoltaica em minha residência.  Gostei muito do atendimento prestado pelo engenheiro Haylton Piva. Tudo funciona muito bem. O material é de qualidade e o serviço também. Fico grata por ter o problema do gasto  de energia elétrica resolvido."</p>
+                <div class="cliente-nome">- Bernadete Guimarães (Bauru/SP)</div>
             </div>
         </div>
     </section>
@@ -859,8 +1194,7 @@
             "Nilton.jpg"
         ];
         
-        // --- MELHORIA 1: PRÉ-CARREGAMENTO DAS IMAGENS ---
-        // Isso garante que a foto não pisque ou demore a carregar na primeira vez que for exibida
+        // --- PRÉ-CARREGAMENTO DAS IMAGENS ---
         imagensHero.forEach(src => {
             const imgPreload = new Image();
             imgPreload.src = src;
@@ -879,6 +1213,82 @@
             }, 500); 
 
         }, 3500); 
+    </script>
+
+    <script>
+        function calcularKit() {
+            // 1. Pega o NOME do cliente
+            let nomeInput = document.getElementById('nomeCliente').value.trim();
+            if (!nomeInput) {
+                alert("Por favor, insira o seu nome antes de simular.");
+                return;
+            }
+
+            // 2. Pega o valor digitado no campo de CONSUMO
+            let consumoInput = document.getElementById('consumoKwh').value;
+            let consumo = parseFloat(consumoInput);
+            
+            // 3. Verifica se o usuário digitou um valor de consumo válido
+            if (!consumo || consumo < 50) {
+                alert("Por favor, insira um consumo válido (mínimo de 50 kWh).");
+                return;
+            }
+            
+            // 4. Faz os cálculos baseados na insolação média de Bauru/SP
+            // Placa de 620W gera ~73 kWh/mês
+            let geracaoPorPlaca = 73;
+            let qtdPlacas = Math.ceil(consumo / geracaoPorPlaca);
+            let geracaoEstimada = qtdPlacas * geracaoPorPlaca;
+            
+            // Calcula a área necessária no telhado (aprox. 2.6m² por placa)
+            let areaTelhado = Math.ceil(qtdPlacas * 2.6);
+            
+            // 5. Dimensionamento do Inversor PHB
+            let inversor = "";
+            if (qtdPlacas <= 4) {
+                inversor = "PHB On-Grid 1,5 kW";
+            } else if (qtdPlacas <= 5) {
+                inversor = "PHB On-Grid 2,0 kW";
+            } else if (qtdPlacas <= 9) {
+                inversor = "PHB On-Grid 3,3 kW";
+            } else if (qtdPlacas <= 11) {
+                inversor = "PHB On-Grid 4,0 kW";
+            } else if (qtdPlacas <= 13) {
+                inversor = "PHB On-Grid 5,0 kW";
+            } else if (qtdPlacas <= 16) {
+                inversor = "PHB On-Grid 6,0 kW";
+            } else if (qtdPlacas <= 20) {
+                inversor = "PHB On-Grid 7,5 ou 7,7 kW";
+            } else if (qtdPlacas <= 22) {
+                inversor = "PHB On-Grid 8,8 kW";
+            } else if (qtdPlacas <= 25) {
+                inversor = "PHB On-Grid 9,3 kW";
+            } else if (qtdPlacas <= 26) {
+                inversor = "PHB On-Grid 10,0 kW";
+            } else {
+                inversor = "Projeto Especial (Acima de 10,0 kW)";
+            }
+            
+            // 6. Joga os resultados formatados de volta para o HTML
+            document.getElementById('resGeracao').innerText = geracaoEstimada + " kWh/mês";
+            document.getElementById('resInversor').innerText = inversor;
+            document.getElementById('resPlacas').innerText = qtdPlacas + " painéis (~620W)";
+            document.getElementById('resArea').innerText = "~ " + areaTelhado + " m²";
+            
+            // 7. Atualiza o botão do WhatsApp com o valor simulado E o nome do cliente!
+            const telefone = "5514997713716";
+            let textoZap = `Olá, meu nome é ${nomeInput}. Fiz uma simulação no site da Piva Engenharia para um consumo de ${consumo} kWh/mês. O resultado estimou ${qtdPlacas} placas e um ${inversor}. Gostaria de um orçamento detalhado!`;
+            let linkZap = `https://wa.me/${telefone}?text=${encodeURIComponent(textoZap)}`;
+            document.getElementById('btnWhatsappCalc').href = linkZap;
+            
+            // 8. Faz a caixa verde de resultados aparecer na tela
+            document.getElementById('resultadoCalc').style.display = 'block';
+            
+            // 9. Rola a tela até o resultado
+            setTimeout(() => {
+                document.getElementById('resultadoCalc').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 150);
+        }
     </script>
 </body>
 </html>
