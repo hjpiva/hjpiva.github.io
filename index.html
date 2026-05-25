@@ -46,7 +46,7 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             color: var(--azul-escuro);
         }
@@ -222,7 +222,7 @@
             font-weight: 600;
         }
 
-        /* --- SEÇÃO NOVA: CALCULADORA E KITS --- */
+        /* --- SEÇÃO: CALCULADORA E KITS --- */
         .simulador-section {
             background-color: var(--texto-claro);
             padding: 80px 5%;
@@ -609,10 +609,51 @@
             font-size: 1.1rem;
         }
 
-        /* --- SOBRE NÓS E CONTATO DO ENGENHEIRO --- */
+        /* --- SEÇÃO NOVA: FAQ (PERGUNTAS FREQUENTES) --- */
+        .faq-section {
+            background-color: var(--fundo-claro);
+        }
+
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--texto-claro);
+            padding: 22px 28px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-left: 5px solid var(--laranja);
+            text-align: left;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            color: var(--azul-escuro);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faq-item h3 i {
+            color: var(--laranja);
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            font-size: 0.98rem;
+            color: #555;
+            line-height: 1.6;
+            margin-left: 26px;
+        }
+
+        /* --- SOBRE NÓS E SELO CREA --- */
         .sobre {
             text-align: center;
-            background-color: var(--fundo-claro);
+            background-color: var(--texto-claro);
         }
 
         .sobre h2 {
@@ -623,6 +664,41 @@
             max-width: 800px;
             margin: 0 auto 30px auto;
             font-size: 1.1rem;
+        }
+
+        /* ESTILO DO NOVO SELO DE AUTORIDADE CREA */
+        .crea-badge {
+            background: var(--fundo-claro);
+            border: 2px dashed var(--azul-escuro);
+            padding: 18px 30px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 35px;
+            text-align: left;
+            max-width: 550px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .crea-badge i {
+            font-size: 2.2rem;
+            color: var(--azul-escuro);
+        }
+
+        .crea-badge-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--azul-escuro);
+            font-size: 1.05rem;
+            margin-bottom: 3px;
+            font-weight: 700;
+        }
+
+        .crea-badge-text p {
+            font-size: 0.88rem;
+            color: #555;
+            margin: 0 !important;
+            line-height: 1.4;
         }
 
         .perfil-engenheiro {
@@ -785,6 +861,17 @@
                 gap: 30px;
             }
 
+            .crea-badge {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .faq-item p {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
             .foto-perfil {
                 width: 100%; 
                 height: auto;
@@ -811,6 +898,7 @@
                 <li><a href="#como-funciona">Como Funciona</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#depoimentos">Avaliações</a></li> 
+                <li><a href="#faq">Dúvidas</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
             </ul>
         </nav>
@@ -823,8 +911,9 @@
                 <br> <h1 class="saudacao-laranja">Bem-vindo(a) à Piva Engenharia</h1>
                 <h1>Energia Solar Inteligente para Casas e Empresas em Bauru</h1>
                 <p>Diga adeus às contas de luz altíssimas. Projetos fotovoltaicos sob medida com instalação rápida, sem dor de cabeça e com economia imediata.</p>
-                <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20energia%20solar." target="_blank" class="btn">
-                    <i class="fa-brands fa-whatsapp"></i> Fazer um Orçamento sem Compromisso
+                <!-- CTA OTIMIZADA PARA TRÁFEGO FRIO -->
+                <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20receber%20uma%20análise%20gratuita%20da%20minha%20conta%20de%20luz." target="_blank" class="btn">
+                    <i class="fa-brands fa-whatsapp"></i> Receber Análise Gratuita da Minha Conta de Luz
                 </a>
             </div>
 
@@ -873,8 +962,9 @@
                             <strong id="resArea">--</strong>
                         </div>
                     </div>
+                    <!-- CTA DA CALCULADORA MAIS CONVIDATIVA -->
                     <a id="btnWhatsappCalc" href="#" target="_blank" class="btn" style="background-color: var(--verde-whatsapp); display: inline-block;">
-                        <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento Comercial Deste Kit
+                        <i class="fa-brands fa-whatsapp"></i> Garantir Minha Análise Gratuita Deste Kit
                     </a>
                     <p class="aviso-estimativa">*Os valores acima são estimativas técnicas padrão para Bauru/SP. O dimensionamento final pode variar de acordo com a orientação do telhado e sombreamento.</p>
                 </div>
@@ -894,7 +984,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Monitoramento Wi-Fi Integrado</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20300%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20300%20kWh." target="_blank" class="btn-kit">Consultar Preço no WhatsApp</a>
                 </div>
 
                 <div class="kit-card">
@@ -908,7 +998,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Suporte técnico total Piva</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20500%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20500%20kWh." target="_blank" class="btn-kit">Consultar Preço no WhatsApp</a>
                 </div>
 
                 <div class="kit-card">
@@ -922,7 +1012,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Homologação CPFL inclusa</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20600%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20600%20kWh." target="_blank" class="btn-kit">Consultar Preço no WhatsApp</a>
                 </div>
 
                 <div class="kit-card">
@@ -936,7 +1026,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Engenharia e execução total</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20800%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%20800%20kWh." target="_blank" class="btn-kit">Consultar Preço no WhatsApp</a>
                 </div>
 
                 <div class="kit-card">
@@ -950,7 +1040,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Máxima geração e segurança</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/5514997713716?text=Olá,%20Piva Engenharia!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%201000%20kWh." target="_blank" class="btn-kit">Ver Preço Estimado</a>
+                    <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20receber%20um%20orçamento%20detalhado%20para%20o%20Kit%20Padrão%20de%201000%20kWh." target="_blank" class="btn-kit">Consultar Preço no WhatsApp</a>
                 </div>
 
             </div>
@@ -997,14 +1087,14 @@
                     <div class="passo-numero">1</div>
                     <div>
                         <h3>Captação e Conversão</h3>
-                        <p>Os módulos no seu telhado captam a luz do sol. O inversor PHB transforma essa energia na corrente exata que seus aparelhos utilizam.</p>
+                        <p>Os módulos no seu telhado captam a luz ultravioleta do sol, mesmo em dias nublados. O inversor PHB transforma essa energia na corrente exata que seus aparelhos utilizam.</p>
                     </div>
                 </div>
                 <div class="passo">
                     <div class="passo-numero">2</div>
                     <div>
                         <h3>Uso Imediato</h3>
-                        <p>A energia gerada vai direto para o seu quadro de distribuição, alimentando geladeira, ar-condicionado e maquinários em tempo real.</p>
+                        <p>A energia gerada vai direto para o seu quadro de distribuição, alimentando geladeira, ar-condicionado e demais eletrodomésticos em tempo real.</p>
                     </div>
                 </div>
                 <div class="passo">
@@ -1094,7 +1184,7 @@
                 <div class="estrelas">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Estou muito satisfeito com os serviços de instalação das placas solares e inversor da PHB. As placas são ótimas e a instalação ficou perfeita. A Empresa Piva Engenharia da uma ótima assistência durante e após os serviços prestados."</p>
+                <p>"Estou muito satisfeito com os serviços de instalação das placas solares e inversor da PHB. As placas são ótimas and a instalação ficou perfeita. A Empresa Piva Engenharia da uma ótima assistência durante e após os serviços prestados."</p>
                 <div class="cliente-nome">- Jehud Bortolozzi (Bauru/SP)</div>
             </div>
             <div class="depoimento-card">
@@ -1110,42 +1200,84 @@
                 <div class="estrelas">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p>"A maneira econômica de instalar sua energia solar.Qualidade nos equipamentos e assistência no pós venda. Como cliente recomendo"</p>
-                <div class="cliente-nome">- João Batista Gonçalves (Bauru/SP)</div>
+                <p>"Fiquei muito satisfeita com a colocação da energia fotovoltaica em minha residência. Gostei muito do atendimento prestado pelo engenheiro Haylton Piva. Tudo funciona muito bem. O material é de qualidade e o serviço também. Fico grata por ter o problema do gasto de energia elétrica resolvido."</p>
+                <div class="cliente-nome">- Bernadete Guimarães (Bauru/SP)</div>
             </div>
+
             <div class="depoimento-card">
                 <i class="fa-solid fa-quote-left"></i>
                 <div class="estrelas">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Fiquei muito satisfeita com a colocação da energia fotovoltaica em minha residência.  Gostei muito do atendimento prestado pelo engenheiro Haylton Piva. Tudo funciona muito bem. O material é de qualidade e o serviço também. Fico grata por ter o problema do gasto  de energia elétrica resolvido."</p>
-                <div class="cliente-nome">- Bernadete Guimarães (Bauru/SP)</div>
+                <p>"A maneira econômica de instalar sua energia solar.Qualidade nos equipamentos e assistência no pós venda. Como cliente recomendo"</p>
+                <div class="cliente-nome">- João Batista Gonçalves (Bauru/SP)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO ADICIONADA: FAQ PARA MATAR OBJEÇÕES -->
+    <section id="faq" class="faq-section">
+        <h2 class="section-title">Dúvidas Frequentes</h2>
+        <p class="section-subtitle">Respondemos às principais perguntas de quem deseja investir em energia solar em Bauru.</p>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> Como sei se o meu telhado é adequado para energia solar?</h3>
+                <p>A maioria dos telhados (fibrocimento, cerâmica, metal ou laje) comporta perfeitamente os painéis solares. Na Piva Engenharia, fazemos uma triagem inicial do peso e da estrutura. Vale destacar que, **caso o número de módulos do projeto seja alto, a avaliação estrutural detalhada deverá ser obrigatoriamente realizada por um engenheiro civil especializado, acompanhada da emissão da respectiva ART (Anotação de Responsabilidade Técnica)**, garantindo total segurança para o seu patrimônio.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> O sistema gera energia em dias de chuva, nublados ou à noite?</h3>
+                <p>Os painéis precisam de luz solar, e não necessariamente de calor. Sendo assim, em dias nublados ou chuvosos, o sistema continua gerando energia, porém em menor intensidade. À noite ele fica desligado, momento em que você consome a energia comum da CPFL e abate o gasto utilizando os "créditos" acumulados de dia.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> Qual é a garantia dos equipamentos da PHB Solar?</h3>
+                <p>Por sermos parceiros oficiais da PHB Solar, você conta com garantia nacional direto de fábrica. Os inversores possuem garantia padrão de até 10 anos e os painéis contam com garantia de performance de até 25 anos. É a certeza de suporte rápido no Brasil caso precise.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> Consigo financiar 100% do projeto?</h3>
+                <p>Sim! Trabalhamos com as principais linhas de crédito e bancos do mercado. Em grande parte dos casos, a parcela do financiamento fica mais barata do que o valor que você já economiza na própria conta de energia, fazendo o sistema se pagar sozinho desde o primeiro mês.</p>
             </div>
         </div>
     </section>
 
     <section id="sobre" class="sobre">
         <h2>Engenharia de Confiança, Perto de Você.</h2>
-        <p>A Piva Engenharia é focada em trazer a melhor tecnologia solar para residências e pequenos comércios em Bauru e região. Sabemos que, infelizmente, o mercado atual conta com diversas marcas de inversores e módulos importados que falham no suporte técnico no Brasil, deixando o cliente com o sistema parado e desamparado em caso de avarias.</p>
-        <p>É exatamente para proteger o seu investimento contra esses riscos que firmamos uma sólida parceria com a PHB Solar, garantindo equipamentos de altíssima qualidade e rigor técnico. <strong>Além disso, contamos com o excelente pós-venda da PHB, que oferece assistência técnica rápida e eficiente direto de fábrica.</strong> Entregamos projetos rigorosamente dimensionados, com equipamentos duráveis e um compromisso real com a sua tranquilidade a longo prazo. O seu telhado merece uma engenharia de verdade.</p>
+        <p>A Piva Engenharia é focada em trazer a melhor tecnologia solar para residências, estabelecimentos comerciais e propriedades rurais (Agronegócio) para Bauru e região. Sabemos que, infelizmente, o mercado atual conta com diversas marcas de inversores e módulos importados que falham no suporte técnico no Brasil, deixando o cliente com o sistema parado e desamparado em caso de avarias.</p>
+        <p>É exatamente para proteger o seu investimento contra esses riscos que firmamos uma sólida parceria com a PHB Solar, garantindo equipamentos de altíssima qualidade e rigor técnico. <strong>Além disso, contamos com o excelente pós-venda da PHB, que oferece assistência técnica rápida e eficiente direto de fábrica.</strong> Entregamos projetos rigorosamente dimensionados, com equipamentos duráveis e um compromisso real com a sua tranquilidade a longo prazo.</p>
+        
+        <!-- NOVO SELO DE AUTORIDADE COM RIGOR TÉCNICO E CREA -->
+        <div class="crea-badge">
+            <i class="fa-solid fa-id-card-clip"></i>
+            <div class="crea-badge-text">
+                <h4>Projetos com Responsabilidade Técnica (ART)</h4>
+                <p>Todos os sistemas da Piva Engenharia são supervisionados, dimensionados e homologados por engenheiro responsável com registro ativo no CREA-SP. Segurança garantida perante a CPFL.</p>
+            </div>
+        </div>
         <br>
-        <a href="https://wa.me/5514997713716" target="_blank" class="btn" style="background-color: var(--azul-escuro); color: var(--texto-claro);">Fale com um Engenheiro</a>
+        
+        <a href="https://wa.me/5514997713716" target="_blank" class="btn" style="background-color: var(--azul-escuro); color: var(--texto-claro);">Falar Diretamente com o Engenheiro</a>
         
         <div class="perfil-engenheiro">
             <img src="foto-engenheiro 3.jpg" alt="Engenheiro Responsável" class="foto-perfil">
             <div class="contato-info">
-                <p><strong>Piva Engenharia LTDA</strong> Soluções em Energia Solar Fotovoltaica</p>
+                <p><strong>Eng. Haylton Piva (CREA-SP)</strong><br>Responsável Técnico / 		Gerente Comercial</p>
+                <p>Piva Engenharia LTDA | Soluções em Energia Solar Fotovoltaica</p>
                 <p><i class="fa-solid fa-phone"></i> Contato: (14) 99771-3716</p>
-                <p><i class="fa-solid fa-envelope"></i> Email: engenharia.piva@gmail.com</p>
-            </div>
+                <p><i class="fa-solid fa-envelope"></i> Email:engenharia.piva@gmail.com</p>
+                <p><i class="fa-solid fa-globe"></i> Site: <a       					href="https://www.pivaengenharia.com.br" target="_blank" style="color: 			inherit;">  	www.pivaengenharia.com.br</a></p>
+            </div>                     
         </div>
     </section>
 
     <footer>
         <h2>Pronto para valorizar seu imóvel e cortar gastos?</h2>
         <p>Mande uma foto da sua conta de luz e descubra em minutos o quanto você pode começar a economizar.</p>
-        <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20simular%20minha%20economia." target="_blank" class="btn">
-            📲 Simular Minha Economia no WhatsApp
+        <!-- CTA DO RODAPÉ OTIMIZADA -->
+        <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20solicitar%20uma%20análise%20gratuita%20da%20minha%20conta%20para%20ver%20a%20economia." target="_blank" class="btn">
+            📲 Solicitar Minha Análise de Economia Gratuita
         </a>
         
         <div class="copyright">
@@ -1187,14 +1319,14 @@
         const fotoCircular = document.querySelector('.circular-photo');
 
         setInterval(() => {
-            fotoCircular.style.opacity = 0;
-
-            setTimeout(() => {
-                indiceAtual = (indiceAtual + 1) % imagensHero.length;
-                fotoCircular.src = imagensHero[indiceAtual];
-                fotoCircular.style.opacity = 1;
-            }, 500); 
-
+            if(fotoCircular) {
+                fotoCircular.style.opacity = 0;
+                setTimeout(() => {
+                    indiceAtual = (indiceAtual + 1) % imagensHero.length;
+                    fotoCircular.src = imagensHero[indiceAtual];
+                    fotoCircular.style.opacity = 1;
+                }, 500);
+            }
         }, 3500); 
     </script>
 
@@ -1218,12 +1350,9 @@
             }
             
             // 4. Faz os cálculos baseados na insolação média de Bauru/SP
-            // Placa de 620W gera ~73 kWh/mês
             let geracaoPorPlaca = 73;
             let qtdPlacas = Math.ceil(consumo / geracaoPorPlaca);
             let geracaoEstimada = qtdPlacas * geracaoPorPlaca;
-            
-            // Calcula a área necessária no telhado (aprox. 2.6m² por placa)
             let areaTelhado = Math.ceil(qtdPlacas * 2.6);
             
             // 5. Dimensionamento do Inversor PHB
@@ -1258,9 +1387,9 @@
             document.getElementById('resPlacas').innerText = qtdPlacas + " painéis (~620W)";
             document.getElementById('resArea').innerText = "~ " + areaTelhado + " m²";
             
-            // 7. Atualiza o botão do WhatsApp com o valor simulado E o nome do cliente!
+            // 7. Atualiza o botão do WhatsApp com o valor simulado E o nome do cliente
             const telefone = "5514997713716";
-            let textoZap = `Olá, meu nome é ${nomeInput}. Fiz uma simulação no site da Piva Engenharia para um consumo de ${consumo} kWh/mês. O resultado estimou ${qtdPlacas} placas e um ${inversor}. Gostaria de um orçamento detalhado!`;
+            let textoZap = `Olá, Haylton! Meu nome é ${nomeInput}. Fiz uma simulação no site para um consumo de ${consumo} kWh/mês. O resultado estimou ${qtdPlacas} placas e um ${inversor}. Gostaria de agendar minha análise gratuita!`;
             let linkZap = `https://wa.me/${telefone}?text=${encodeURIComponent(textoZap)}`;
             document.getElementById('btnWhatsappCalc').href = linkZap;
             
