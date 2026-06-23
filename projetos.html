@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Piva Engenharia: Projetos elétricos residenciais, comerciais, SPDA, cabine primária e aprovação de padrão CPFL em Bauru e região. Portfólio técnico com ART.">
+    <meta name="keywords" content="projeto eletrico bauru, engenheiro eletricista bauru, padrao cpfl bauru, spda bauru, cabine primaria bauru, piva engenharia, aterramento bauru, energia solar bauru">
+    
+    <meta property="og:title" content="Piva Engenharia | Projetos Elétricos em Bauru">
+    <meta property="og:description" content="Segurança jurídica, economia de materiais e conformidade técnica para sua obra ou instituição com emissão de ART.">
+    <meta property="og:image" content="foto-engenheiro 3.jpg">
+    <meta property="og:url" content="https://www.engenharia.piva.com.br/projetos.html"> 
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <title>Piva Engenharia | Projetos Elétricos e Engenharia de Potência</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- PADRÃO DE CORES OFICIAL PIVA ENGENHARIA --- */
+        :root {
+            --azul-escuro: #0f3a5e; 
+            --laranja: #f26f22;     
+            --laranja-hover: #d95d18;
+            --fundo-claro: #f8f9fa;
+            --texto-escuro: #333333;
+            --texto-claro: #ffffff;
+            --verde-whatsapp: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--texto-escuro);
+            line-height: 1.6;
+            background-color: var(--texto-claro);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--azul-escuro);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: var(--texto-claro);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+        }
+
+        .logo-piva {
+            max-height: 100px; 
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px; 
+        }
+
+        nav a {
+            background-color: var(--azul-escuro);
+            color: var(--texto-claro);
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: var(--laranja);
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--laranja);
+            color: var(--texto-claro);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--laranja-hover);
+            transform: translateY(-2px);
+        }
+
+        /* --- HERO --- */
+        .hero {
+            background-color: var(--azul-escuro); 
+            color: var(--texto-claro);
+            margin-top: 130px; 
+            display: flex;
+            align-items: center;
+            padding: 80px 5%;
+            min-height: 60vh; 
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--texto-claro);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- CARD ATUACAO --- */
+        .secao-atuacao {
+            background-color: var(--fundo-claro);
+            padding: 60px 5% 20px 5%;
+        }
+
+        .card-atuacao {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--texto-claro);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid var(--laranja);
+            padding: 40px;
+            text-align: left;
+        }
+
+        .card-atuacao h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--azul-escuro);
+        }
+
+        .card-atuacao p {
+            font-size: 1.05rem;
+            color: #555555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .card-atuacao p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- SEÇÃO DE SERVIÇOS 4 EM LINHA COMPACTO --- */
+        .servicos-eletricos {
+            background-color: var(--fundo-claro);
+            padding: 60px 3%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .grid-cards {
+            display: grid;
+            /* Força os 4 itens a ficarem estritamente lado a lado em telas grandes */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--texto-claro);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eef2f5;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-header-gradiente {
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--laranja) 100%);
+            padding: 30px 15px;
+            text-align: center;
+            color: var(--texto-claro);
+        }
+
+        .card-header-gradiente i {
+            font-size: 38px;
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-body h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--azul-escuro);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .card-body .sub-desc {
+            font-size: 0.88rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .card-list {
+            list-style: none;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-list li {
+            font-size: 0.88rem;
+            color: #444;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .card-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--laranja);
+            font-size: 12px;
+        }
+
+        .card-btn {
+            background-color: var(--azul-escuro);
+            color: var(--texto-claro);
+            padding: 12px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            text-align: center;
+            transition: background-color 0.3s;
+            width: 100%;
+            display: block;
+            border: none;
+            margin-top: auto;
+        }
+
+        .card-btn:hover {
+            background-color: #09243a;
+        }
+
+        /* --- PORTFÓLIO DE PROJETOS --- */
+        .portfolio {
+            background-color: var(--texto-claro);
+        }
+
+        .portfolio-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-item {
+            background: var(--fundo-claro);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--laranja);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .project-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--azul-escuro);
+        }
+
+        .project-item p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .project-item strong {
+            color: var(--laranja);
+        }
+
+        /* --- DIFERENCIAIS --- */
+        .diferenciais {
+            background-color: var(--azul-escuro);
+            color: var(--texto-claro);
+            text-align: center;
+        }
+
+        .diferenciais h2 {
+            color: var(--texto-claro);
+        }
+
+        .lista-diferenciais {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            text-align: left;
+        }
+
+        .lista-diferenciais p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .lista-diferenciais strong {
+            color: var(--laranja);
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: #0a253c;
+            color: var(--texto-claro);
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+        }
+
+        footer h2 {
+            color: var(--texto-claro);
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            margin-bottom: 30px;
+        }
+
+        .copyright {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #1a3e5c;
+            padding-top: 20px;
+        }
+
+        /* --- BOTÃO FLUTUANTE --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--verde-whatsapp);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        /* --- RESPONSIVIDADE ADAPTADA --- */
+        @media (max-width: 1100px) {
+            .grid-cards {
+                grid-template-columns: repeat(2, 1fr); /* 2x2 em tablets/notebooks pequenos */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                position: relative;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .logo-piva {
+                max-height: 70px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .hero {
+                margin-top: 0px;
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card-atuacao h2 {
+                font-size: 1.7rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr; /* 1 card por linha no celular */
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo-piva.jpg" alt="Piva Engenharia" class="logo-piva">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao Solar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Projetos Elétricos e Engenharia de Potência</h1>
+            <p>Segurança jurídica, máxima economia de insumos e total conformidade técnica com as normas vigentes para obras civis, comerciais, industriais e poder público em Bauru e região.</p>
+            <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20um%20orçamento%20para%20Projeto%20Elétrico." target="_blank" class="btn">
+                <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento de Projeto
+            </a>
+        </div>
+    </section>
+
+    <section class="secao-atuacao">
+        <div class="card-atuacao">
+            <h2>Atuação em Engenharia e Projetos Elétricos</h2>
+            <p>Com sólida formação técnica e registro ativo no CREA-SP, o <strong>Eng. Haylton Piva</strong> desenvolve estudos eletrotécnicos de engenharia voltados à eficiência energética, confiabilidade de sistemas e segurança operacional para comércios, indústrias e propriedades rurais.</p>
+            <p>Atuamos desde a concepção geométrica e análise de viabilidade técnica até a aprovação e homologação final perante a distribuidora local (CPFL). Nossos projetos respeitam rigidamente as normas vigentes (ABNT, NR-10 e regulamentos das concessionárias), aliando máxima performance a custos inteligentes de execução.</p>
+        </div>
+    </section>
+
+    <section class="servicos-eletricos">
+        <h2 class="section-title">Especialidades em Projetos de Engenharia</h2>
+        
+        <div class="grid-cards">
+            
+            <div class="card">
+                <div class="card-header-gradiente">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Cabines Primárias e Subestações</h3>
+                    <p class="sub-desc">Dimensionamento completo para clientes do Grupo A (Média Tensão).</p>
+                    <ul class="card-list">
+                        <li>Projeto eletromecânico e civil de Subestações de Entrada (Aéreas ou Abrigadas).</li>
+                        <li>Dimensionamento de Postos de Transformação e quadros de distribuição geral.</li>
+                        <li>Estudos de Proteção, seletividade e coordenação de disjuntores de MT.</li>
+                        <li>Projetos de Malha de Aterramento e SPDA (Pára-raios).</li>
+                        <li>Entrada técnica completa e burocracia resolvida junto à CPFL.</li>
+                    </ul>
+                    <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20consultar%20um%20projeto%20de%20Média%20Tensão%20(Subestação)." target="_blank" class="card-btn">Consultar Projeto de Média Tensão</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header-gradiente">
+                    <i class="fa-solid fa-solar-panel"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Geração Distribuída (Fotovoltaica)</h3>
+                    <p class="sub-desc">Micro e Minigeração sob medida para otimização de custos e espaço.</p>
+                    <ul class="card-list">
+                        <li>Simulação de sombreamento tridimensional do telhado por software.</li>
+                        <li>Dimensionamento elétrico (Inversores PHB, Strings e Stringboxes).</li>
+                        <li>Engenharia mecânica-estrutural para fixação rígida dos módulos.</li>
+                        <li>Diagramas unifilares e trifilares detalhados para aprovação.</li>
+                        <li>Emissão de ART (Anotação de Responsabilidade Técnica) no CREA.</li>
+                    </ul>
+                    <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20consultar%20um%20projeto%20de%20Energia%20Solar%20Fotovoltaica." target="_blank" class="card-btn">Consultar Projeto Solar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header-gradiente">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Entrada de Energia (Padrão CPFL)</h3>
+                    <p class="sub-desc">Dimensionamento e aprovação de padrões de entrada individuais ou coletivos.</p>
+                    <ul class="card-list">
+                        <li>Montagem de layouts de painéis de medição padrão CPFL Paulista.</li>
+                        <li>Cálculo de demanda técnica para aumento ou alteração de carga de energia.</li>
+                        <li>Legalização ágil eliminando retrabalhos ou reprovas burocráticas.</li>
+                        <li>Atendimento integral às regulamentações técnicas exigidas pela concessionária.</li>
+                        <li>Homologação com emissão imediata de ART técnica do responsável.</li>
+                    </ul>
+                    <a href="https://wa.me/5514997713716?text=Olá!%20Preciso%20de%20ajuda%20para%20aprovação/aumento%20de%20carga%20no%20padrão%20CPFL." target="_blank" class="card-btn">Consultar Padrão CPFL</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header-gradiente">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Projetos Elétricos em Baixa Tensão</h3>
+                    <p class="sub-desc">Instalações elétricas otimizadas para residências de alto padrão e comércios.</p>
+                    <ul class="card-list">
+                        <li>Divisão milimétrica de circuitos e equilíbrio de fases conforme NBR 5410.</li>
+                        <li>Detalhamento executivo para economia real na compra de cabos e insumos.</li>
+                        <li>Projeto de iluminação (Luminotécnico) e locação estratégica de quadros.</li>
+                        <li>Infraestrutura planejada prevenindo riscos de sinistros ou quebra de paredes.</li>
+                        <li>Garantia técnica de segurança operacional para todo o patrimônio construído.</li>
+                    </ul>
+                    <a href="https://wa.me/5514997713716?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20Projeto%20Elétrico%20Residencial/Comercial." target="_blank" class="card-btn">Consultar Baixa Tensão</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2 class="section-title">Experiência Homologada (Com ART)</h2>
+        
+        <div class="portfolio-list">
+            
+            <div class="project-item" style="border-left-color: var(--azul-escuro); background: #f0f4f8;">
+                <h3><i class="fa-solid fa-globe" style="color: var(--azul-escuro); margin-right: 8px;"></i> Viveiro de Mudas (Industrial) - PARACEL Celulose (Paraguai)</h3>
+                <p>Projeto Elétrico, Iluminação, <strong>Cabine Primária (Subestação)</strong>, SPDA e <strong>Grupos Geradores Diesel/Elétrico</strong> desenvolvido em parceria com a <a href="https://www.pegoraroengenharia.com.br" target="_blank" style="color: var(--laranja); font-weight: bold; text-decoration: underline;"><i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem; margin-right: 3px;"></i>Pegoraro Engenharia</a> para o complexo industrial da PARACEL no Paraguai.</p>
+                <p><strong>Potência Total Instalada:</strong> 750kVA</p>
+            </div>
+            
+            <!-- UAI CONTAGEM -->
+            <div class="project-item">
+                <h3>Unidade de Atendimento Integrado (UAI) - Contagem-MG</h3>
+                <p>Projeto Elétrico, Iluminação e de Cabeamento Estruturado de Rede para UAI PARA TODOS Gerenciamento de Unidades Mineiras de Atendimento Integrado S.A.</p>
+                <p><a href="https://www.facebook.com/seplagmg/videos/nova-uai-em-contagem-o-governo-de-minas-inaugurou-a-segunda-unidade-de-atendimen/1381922039785181/?" target="_blank" style="color: var(--laranja); font-weight: bold; text-decoration: underline;"><i class="fa-solid fa-video" style="font-size: 0.85rem; margin-right: 5px;"></i>Assista ao vídeo de inauração oficial da unidade</a></p>
+                <p><strong>Potência Total Instalada:</strong> 96kVA</p>
+            </div>
+
+            <!-- UAI DIAMANTINA -->
+            <div class="project-item">
+                <h3>Unidade de Atendimento Integrado (UAI) - Diamantina-MG</h3>
+                <p>Projeto Elétrico, Iluminação e de Cabeamento Estruturado de Rede executado para UAI PARA TODOS Gerenciamento de Unidades Mineiras de Atendimento Integrado S.A.</p>
+                <p><a href="https://www.instagram.com/reel/CxMEptbOF9L/?hl=pt" target="_blank" style="color: var(--laranja); font-weight: bold; text-decoration: underline;"><i class="fa-brands fa-instagram" style="font-size: 0.9rem; margin-right: 5px;"></i>Veja a unidade no Instagram</a></p>
+                <p><strong>Potência Total Instalada:</strong> 73kVA[cite: 3]</p>
+            </div>
+
+            <!-- UNIDADE DE SAÚDE GARÇA -->
+            <div class="project-item">
+                <h3>Unidade de Saúde Jardim João Zapapa - Garça-SP</h3>
+                <p>Projeto Elétrico e Iluminação desenvolvido para a Prefeitura de Garça (Departamento de Convênios).</p>
+                <p><a href="https://www.facebook.com/GARCANEWS/videos/-agora-%C3%A9-realidade-nova-unidade-de-sa%C3%BAde-do-jo%C3%A3o-zapata-deve-come%C3%A7ar-a-funcionar/983362304083787/" target="_blank" style="color: var(--laranja); font-weight: bold; text-decoration: underline;"><i class="fa-solid fa-video" style="font-size: 0.85rem; margin-right: 5px;"></i>Assista ao vídeo da nova unidade de saúde</a></p>
+                <p><strong>Potência Instalada:</strong> 56kVA[cite: 2]</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Ecoponto Municipal - Piratininga-SP</h3>
+                <p>Projeto Elétrico e Iluminação desenvolvido para a Prefeitura de Piratininga.</p>
+                <p><strong>Potência Instalada:</strong> 26kVA</p>
+            </div>
+
+            <!-- PRAÇA PIRATININGA -->
+            <div class="project-item">
+                <h3>Praça Coronel Cardoso Franco - Piratininga-SP</h3>
+                <p>Projeto Elétrico e Iluminação desenvolvido para a Prefeitura de Piratininga.[cite: 2]</p>
+                <p><a href="https://www.instagram.com/p/DDmWQmkx4k2/" target="_blank" style="color: var(--laranja); font-weight: bold; text-decoration: underline;"><i class="fa-brands fa-instagram" style="font-size: 0.9rem; margin-right: 5px;"></i>Veja o projeto da praça no Instagram</a></p>
+                <p><strong>Potência Instalada:</strong> 21kVA[cite: 2]</p>
+            </div>
+
+            <div class="project-item" style="border-left-color: var(--laranja); background: #fffcf9; text-align: center; padding: 30px;">
+                <h3 style="color: var(--laranja); font-size: 1.4rem;"><i class="fa-solid fa-sun" style="margin-right: 8px;"></i> Projetos Fotovoltaicos (Energia Solar)</h3>
+                <p style="font-size: 1.1rem; color: #444; max-width: 700px; margin: 10px auto;">Vasta experiência em transição energética, somando <strong>mais de 20 sistemas fotovoltaicos projetados e homologados</strong> em Bauru e região, garantindo economia imediata e sustentabilidade para residências e comércios.</p>
+                <p style="font-size: 1.2rem; margin-top: 10px;"><strong>Potência Total Acumulada:</strong> ~100kVA</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="diferenciais">
+        <h2 class="section-title">A Diferença de uma Engenharia de Verdade</h2>
+        <div class="lista-diferenciais">
+            <p><i class="fa-solid fa-circle-check"></i> <strong>Zero Desperdício de Insumos:</strong> O cálculo milimétrico do projeto garante a compra exata da bitola de cabos e disjuntores, gerando grande economia financeira no orçamento de materiais da obra.</p>
+            <p><i class="fa-solid fa-circle-check"></i> <strong>Infraestrutura Pronta para Solar:</strong> Nossos layouts elétricos já nascem com o espaço físico e a prumada de tubulações previstos para receber kits PHB Solar no futuro, evitando qualquer quebra-quebra de alvenaria.</p>
+            <p><i class="fa-solid fa-circle-check"></i> <strong>Anotação de Responsabilidade Técnica (ART):</strong> Segurança legal absoluta perante o CREA-SP, companhias de seguro, prefeituras e órgãos públicos municipais.</p>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Pronto para planejar a infraestrutura elétrica do seu imóvel?</h2>
+        <p>Garanta que sua planta elétrica seja assinada por quem possui vasta bagagem prática corporativa, industrial e governamental.</p>
+        <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20um%20orçamento%20para%20Projeto%20Elétrico." target="_blank" class="btn">
+            💬 Falar com o Engenheiro no WhatsApp
+        </a>
+        
+        <div class="copyright">
+            <p>&copy; 2026 Piva Engenharia. Todos os direitos reservados. Projetos Elétricos e Homologações com ART ativa no CREA-SP.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5514997713716?text=Olá,%20Haylton!%20Gostaria%20de%20um%20orçamento%20para%20Projeto%20Elétrico." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
